@@ -1,0 +1,17 @@
+[
+  "txn_velocity_24h",
+  "txn_velocity_1h",
+  "risk_score_internal",
+  "ip_risk_score",
+  "chargeback_history_count",
+  "device_trust_score",
+  "country_location_mismatch",
+  "customer_total_transactions",
+  "customer_device_count",
+  "account_age_days",
+  "corridor_risk",
+  "exchange_rate_src_to_dest",
+  "amount_src",
+  "fee",
+  "amount_usd"
+]
