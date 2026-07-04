@@ -1,15 +1,9 @@
  
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
-import os
 import joblib, numpy as np
 
-# Get the absolute path to the directory where app.py is located
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Construct the path to the model file in the same directory
-model_path = os.path.join(BASE_DIR, "nova_pay_fraud_model_lean.joblib")
-
-artifact = joblib.load(model_path)
+artifact = joblib.load("../service/nova_pay_fraud_model_lean.joblib")                           # load the LEAN model artifact (short feature list)
 model    = artifact["model"]                                        # the sklearn model object itself
 FEATURES = artifact["feature_cols"]                                 # the model's own feature list (short form)
 THRESH   = artifact["threshold"]                                    # the model's own threshold for classifying fraud
