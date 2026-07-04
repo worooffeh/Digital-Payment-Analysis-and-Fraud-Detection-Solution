@@ -16,4 +16,3 @@ shap
 h5py 
 pyarrow 
 msgpack
-streamlit
